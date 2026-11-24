@@ -10,33 +10,265 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AwardsRouteImport } from './routes/awards'
+import { Route as BotmPollsRouteImport } from './routes/botm-polls'
+import { Route as BuddyReadsRouteImport } from './routes/buddy-reads'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DiscussionsRouteImport } from './routes/discussions'
+import { Route as ExploreBooksRouteImport } from './routes/explore-books'
+import { Route as FeatureYourBookRouteImport } from './routes/feature-your-book'
+import { Route as LeaderboardRouteImport } from './routes/leaderboard'
+import { Route as MembersRouteImport } from './routes/members'
+import { Route as MyMrcRouteImport } from './routes/my-mrc'
+import { Route as ReadingChallengeRouteImport } from './routes/reading-challenge'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
+import { Route as BooksSlugRouteImport } from './routes/books.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BotmPollsRoute = BotmPollsRouteImport.update({
+  id: '/botm-polls',
+  path: '/botm-polls',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuddyReadsRoute = BuddyReadsRouteImport.update({
+  id: '/buddy-reads',
+  path: '/buddy-reads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiscussionsRoute = DiscussionsRouteImport.update({
+  id: '/discussions',
+  path: '/discussions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreBooksRoute = ExploreBooksRouteImport.update({
+  id: '/explore-books',
+  path: '/explore-books',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeatureYourBookRoute = FeatureYourBookRouteImport.update({
+  id: '/feature-your-book',
+  path: '/feature-your-book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeaderboardRoute = LeaderboardRouteImport.update({
+  id: '/leaderboard',
+  path: '/leaderboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MembersRoute = MembersRouteImport.update({
+  id: '/members',
+  path: '/members',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyMrcRoute = MyMrcRouteImport.update({
+  id: '/my-mrc',
+  path: '/my-mrc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReadingChallengeRoute = ReadingChallengeRouteImport.update({
+  id: '/reading-challenge',
+  path: '/reading-challenge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const BooksSlugRoute = BooksSlugRouteImport.update({
+  id: '/books/$slug',
+  path: '/books/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/auth': typeof AuthRoute
+  '/awards': typeof AwardsRoute
+  '/botm-polls': typeof BotmPollsRoute
+  '/buddy-reads': typeof BuddyReadsRoute
+  '/contact': typeof ContactRoute
+  '/discussions': typeof DiscussionsRoute
+  '/explore-books': typeof ExploreBooksRoute
+  '/feature-your-book': typeof FeatureYourBookRoute
+  '/leaderboard': typeof LeaderboardRoute
+  '/members': typeof MembersRoute
+  '/my-mrc': typeof MyMrcRoute
+  '/reading-challenge': typeof ReadingChallengeRoute
+  '/reset-password': typeof ResetPasswordRoute
+  '/terms': typeof TermsRoute
+  '/admin': typeof AuthenticatedAdminRoute
+  '/books/$slug': typeof BooksSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/auth': typeof AuthRoute
+  '/awards': typeof AwardsRoute
+  '/botm-polls': typeof BotmPollsRoute
+  '/buddy-reads': typeof BuddyReadsRoute
+  '/contact': typeof ContactRoute
+  '/discussions': typeof DiscussionsRoute
+  '/explore-books': typeof ExploreBooksRoute
+  '/feature-your-book': typeof FeatureYourBookRoute
+  '/leaderboard': typeof LeaderboardRoute
+  '/members': typeof MembersRoute
+  '/my-mrc': typeof MyMrcRoute
+  '/reading-challenge': typeof ReadingChallengeRoute
+  '/reset-password': typeof ResetPasswordRoute
+  '/terms': typeof TermsRoute
+  '/admin': typeof AuthenticatedAdminRoute
+  '/books/$slug': typeof BooksSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/about': typeof AboutRoute
+  '/auth': typeof AuthRoute
+  '/awards': typeof AwardsRoute
+  '/botm-polls': typeof BotmPollsRoute
+  '/buddy-reads': typeof BuddyReadsRoute
+  '/contact': typeof ContactRoute
+  '/discussions': typeof DiscussionsRoute
+  '/explore-books': typeof ExploreBooksRoute
+  '/feature-your-book': typeof FeatureYourBookRoute
+  '/leaderboard': typeof LeaderboardRoute
+  '/members': typeof MembersRoute
+  '/my-mrc': typeof MyMrcRoute
+  '/reading-challenge': typeof ReadingChallengeRoute
+  '/reset-password': typeof ResetPasswordRoute
+  '/terms': typeof TermsRoute
+  '/_authenticated/admin': typeof AuthenticatedAdminRoute
+  '/books/$slug': typeof BooksSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/auth'
+    | '/awards'
+    | '/botm-polls'
+    | '/buddy-reads'
+    | '/contact'
+    | '/discussions'
+    | '/explore-books'
+    | '/feature-your-book'
+    | '/leaderboard'
+    | '/members'
+    | '/my-mrc'
+    | '/reading-challenge'
+    | '/reset-password'
+    | '/terms'
+    | '/admin'
+    | '/books/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/auth'
+    | '/awards'
+    | '/botm-polls'
+    | '/buddy-reads'
+    | '/contact'
+    | '/discussions'
+    | '/explore-books'
+    | '/feature-your-book'
+    | '/leaderboard'
+    | '/members'
+    | '/my-mrc'
+    | '/reading-challenge'
+    | '/reset-password'
+    | '/terms'
+    | '/admin'
+    | '/books/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/_authenticated'
+    | '/about'
+    | '/auth'
+    | '/awards'
+    | '/botm-polls'
+    | '/buddy-reads'
+    | '/contact'
+    | '/discussions'
+    | '/explore-books'
+    | '/feature-your-book'
+    | '/leaderboard'
+    | '/members'
+    | '/my-mrc'
+    | '/reading-challenge'
+    | '/reset-password'
+    | '/terms'
+    | '/_authenticated/admin'
+    | '/books/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AboutRoute: typeof AboutRoute
+  AuthRoute: typeof AuthRoute
+  AwardsRoute: typeof AwardsRoute
+  BotmPollsRoute: typeof BotmPollsRoute
+  BuddyReadsRoute: typeof BuddyReadsRoute
+  ContactRoute: typeof ContactRoute
+  DiscussionsRoute: typeof DiscussionsRoute
+  ExploreBooksRoute: typeof ExploreBooksRoute
+  FeatureYourBookRoute: typeof FeatureYourBookRoute
+  LeaderboardRoute: typeof LeaderboardRoute
+  MembersRoute: typeof MembersRoute
+  MyMrcRoute: typeof MyMrcRoute
+  ReadingChallengeRoute: typeof ReadingChallengeRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
+  TermsRoute: typeof TermsRoute
+  BooksSlugRoute: typeof BooksSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +280,165 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/botm-polls': {
+      id: '/botm-polls'
+      path: '/botm-polls'
+      fullPath: '/botm-polls'
+      preLoaderRoute: typeof BotmPollsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/buddy-reads': {
+      id: '/buddy-reads'
+      path: '/buddy-reads'
+      fullPath: '/buddy-reads'
+      preLoaderRoute: typeof BuddyReadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/discussions': {
+      id: '/discussions'
+      path: '/discussions'
+      fullPath: '/discussions'
+      preLoaderRoute: typeof DiscussionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore-books': {
+      id: '/explore-books'
+      path: '/explore-books'
+      fullPath: '/explore-books'
+      preLoaderRoute: typeof ExploreBooksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feature-your-book': {
+      id: '/feature-your-book'
+      path: '/feature-your-book'
+      fullPath: '/feature-your-book'
+      preLoaderRoute: typeof FeatureYourBookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leaderboard': {
+      id: '/leaderboard'
+      path: '/leaderboard'
+      fullPath: '/leaderboard'
+      preLoaderRoute: typeof LeaderboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/members': {
+      id: '/members'
+      path: '/members'
+      fullPath: '/members'
+      preLoaderRoute: typeof MembersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-mrc': {
+      id: '/my-mrc'
+      path: '/my-mrc'
+      fullPath: '/my-mrc'
+      preLoaderRoute: typeof MyMrcRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reading-challenge': {
+      id: '/reading-challenge'
+      path: '/reading-challenge'
+      fullPath: '/reading-challenge'
+      preLoaderRoute: typeof ReadingChallengeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/admin': {
+      id: '/_authenticated/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AuthenticatedAdminRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/books/$slug': {
+      id: '/books/$slug'
+      path: '/books/$slug'
+      fullPath: '/books/$slug'
+      preLoaderRoute: typeof BooksSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAdminRoute: typeof AuthenticatedAdminRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAdminRoute: AuthenticatedAdminRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AboutRoute: AboutRoute,
+  AuthRoute: AuthRoute,
+  AwardsRoute: AwardsRoute,
+  BotmPollsRoute: BotmPollsRoute,
+  BuddyReadsRoute: BuddyReadsRoute,
+  ContactRoute: ContactRoute,
+  DiscussionsRoute: DiscussionsRoute,
+  ExploreBooksRoute: ExploreBooksRoute,
+  FeatureYourBookRoute: FeatureYourBookRoute,
+  LeaderboardRoute: LeaderboardRoute,
+  MembersRoute: MembersRoute,
+  MyMrcRoute: MyMrcRoute,
+  ReadingChallengeRoute: ReadingChallengeRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
+  TermsRoute: TermsRoute,
+  BooksSlugRoute: BooksSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

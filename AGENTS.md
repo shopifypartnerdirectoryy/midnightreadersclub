@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep community feature modules under `src/features/community` and thin file routes under `src/routes`; this shares one reading-room implementation across all books.
+- Public catalogue reads use a server publishable client and TanStack Query; private reader writes use the generated browser client with owner-scoped RLS.
+- Store editorial content, display benchmarks and genuine reader interactions separately; only genuine records feed competition aggregates.
+- Store administrator roles separately and verify them server-side before administration; never infer privileges from profile metadata.

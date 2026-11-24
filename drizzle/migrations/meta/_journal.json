@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1795537982993,
+      "tag": "0000_reading_community_foundation",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795538055120,
+      "tag": "0001_editorial_collection_and_upload_permissions",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795538259391,
+      "tag": "0002_add_thousand_little_cuts",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1795538511589,
+      "tag": "0003_administration_audit_and_reader_history",
+      "breakpoints": true
+    }
+  ]
+}

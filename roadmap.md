@@ -1,0 +1,11 @@
+# Midnight Readers Club
+- [ ] Literary design, community home, and navigation
+- [ ] Database-backed library and reading rooms
+- [ ] Accounts, profiles, shelves, progress, ratings, votes, and reviews
+- [ ] Discussions, polls, buddy reads, and challenge participation
+- [ ] Leaderboard and awards
+- [ ] Author packages, submissions, and administration
+- [ ] Responsive and end-to-end checks
+- [ ] Real initial book materials — waiting for supplied books
+- [ ] Add A Thousand Little Cuts from supplied cover and synopsis
+- [ ] Verified online payments — waiting for payment provider
