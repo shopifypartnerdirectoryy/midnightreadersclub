@@ -6,6 +6,5 @@
 - [ ] Leaderboard and awards
 - [ ] Author packages, submissions, and administration
 - [ ] Responsive and end-to-end checks
-- [ ] Real initial book materials — waiting for supplied books
-- [ ] Add A Thousand Little Cuts from supplied cover and synopsis
+- [ ] Replace the temporary classics with the ten supplied books and covers; keep A Thousand Little Cuts as title 11
 - [ ] Verified online payments — waiting for payment provider
